@@ -41,6 +41,7 @@ type Transport interface {
 }
 
 // NewTransport creates new transport object with url
+// 实现了使用chan tcp udp三种网络传输方法
 func NewTransport(addr string) Transport {
 	if !strings.Contains(addr, "://") {
 		addr = *Scheme + "://" + addr

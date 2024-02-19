@@ -10,6 +10,7 @@ import (
 type NodeID string
 
 // NewNodeID returns a new NodeID type given two int number of zone and node
+// 为节点node创建他的NodeID
 func NewNodeID(node int) NodeID {
 	if node < 0 {
 		node = -node
@@ -34,6 +35,7 @@ func NewNodeID(node int) NodeID {
 //}
 
 // Node returns Node NodeID component
+// 返回一个节点的NodeId的整数值
 func (i NodeID) Node() int {
 	var s string
 	s = string(i)
